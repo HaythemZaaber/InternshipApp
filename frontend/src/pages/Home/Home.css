@@ -1,0 +1,61 @@
+#concepts {
+  max-width: 70vw;
+  margin: auto;
+  position: relative;
+  top: 50vh;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  caret-color: transparent;
+  }
+
+.concept {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(#250358, #440c66);
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 20px rgba(234, 78, 240, 0.2);
+  width: 30%;
+  transition: all 0.2s;
+}
+
+.concept:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s;
+  box-shadow: 0 2px 30px rgba(234, 78, 240, 0.4);
+}
+
+.concept img {
+  /* width: 8rem; */
+  height: 8rem;
+  object-fit: contain;
+}
+
+.concept h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.concept p {
+  margin: 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+button {
+  color: #fff !important ;
+  background-color: #5c199e;
+  padding: 10px;
+  font-weight: bold;
+  margin: 30px 10px 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}

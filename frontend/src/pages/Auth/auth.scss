@@ -1,0 +1,73 @@
+.authContainer {
+  max-width: 70vw;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 40vw;
+  padding: 40px;
+  background: linear-gradient(#250358, #440c66);
+  box-shadow: 5px 5px 15px #250358;
+  border-radius: 10px;
+  color: #fff;
+
+  h2 {
+    text-align: center;
+    font-size: 1.7rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-family: "Courier New", Courier, monospace;
+    caret-color: transparent;
+  }
+
+  form div {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    label {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      font-style: italic;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    input {
+      padding: 0.5em;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      font-size: inherit;
+      margin-bottom: 15px;
+      background: #250358;
+      color: #fff;
+      font-family: "Courier New";
+    }
+  }
+
+  form .btn {
+    width: fit-content;
+    margin: auto;
+  }
+
+  form button {
+    text-align: center;
+    margin: 30px 0;
+    padding: 0.6em 2em;
+    border-radius: 5px;
+    border: none;
+    color: #fff !important ;
+    background-color: #5c199e;
+  }
+}
+
+/* src/toastify-custom.css */
+/* Example styles to change the notification bar color */
+.custom-toastify {
+  background-color: #2196f3; /* Change this to your desired background color */
+  color: #fff; /* Change this to your desired text color */
+}
