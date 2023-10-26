@@ -36,8 +36,8 @@ const App = () => {
           element={<AuthComponent person="admin" />}
         />
         <Route path="admin/dashboard" element={<AdminDashboard />}>
-          {/* <Route path="news" element={<News />} /> */}
-          {/* <Route path="studentsGroup" element={<StudentsGroup />} /> */}
+          <Route path="news" element={<News />} />
+          <Route path="studentsGroup" element={<StudentsGroup />} />
           {/* <Route path="news" element={<News />} /> */}
           {/* <Route path="news" element={<News />} /> */}
         </Route>
