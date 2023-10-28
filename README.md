@@ -1,1 +1,1 @@
-# IntershipApp
+# InternshipApp
