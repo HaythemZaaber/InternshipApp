@@ -5,13 +5,17 @@ if (process.env.NODE_ENV != "production") {
 
 // Import dependencies
 const express = require("express");
-require('express-async-errors')
+require("express-async-errors");
 const cors = require("cors");
 const { errorHandler } = require("./middleware/error.middleware");
 const connectToDb = require("./config/connectToDb");
+// to access an images in the server from an url using static
+
+
 
 // Create an express app
 const app = express();
+app.use(express.static('public'))
 app.use(
   cors({
     origin: "http://localhost:3001",

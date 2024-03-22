@@ -6,8 +6,18 @@ import AuthComponent from "./pages/Auth/AuthComponent";
 import AdminDashboard from "./pages/Dashboards/AdminDashboard";
 import TeacherDashboard from "./pages/Dashboards/TeacherDashboard";
 import StudentDashboard from "./pages/Dashboards/StudentDashboard";
-import News from "./components/AdminDashboard/News";
-import StudentsGroup from "./components/AdminDashboard/StudentsGroup";
+import AdminNews from "./components/AdminDashboard/AdminNews";
+import Students from "./components/AdminDashboard/Students";
+import StudentNews from "./components/StudentDashboard/StudentNews";
+import Internship from "./components/StudentDashboard/Internship";
+import StudentProfile from "./components/StudentDashboard/StudentProfile";
+import InternshipRequest from "./components/StudentDashboard/InternshipRequest";
+import Internships from "./components/TeacherDashboard/Internships";
+import TeacherNews from "./components/TeacherDashboard/TeacherNews";
+import StudentNotification from "./components/StudentDashboard/StudentNotification";
+import TeacherNotifications from "./components/TeacherDashboard/TeacherNotifications";
+import InternshipRequests from "./components/AdminDashboard/InternshipRequests";
+
 
 const App = () => {
   return (
@@ -35,14 +45,23 @@ const App = () => {
           path="admin/register"
           element={<AuthComponent person="admin" />}
         />
-        <Route path="admin/dashboard" element={<AdminDashboard />}>
-          {/* <Route path="news" element={<News />} /> */}
-          {/* <Route path="studentsGroup" element={<StudentsGroup />} /> */}
-          {/* <Route path="news" element={<News />} /> */}
-          {/* <Route path="news" element={<News />} /> */}
+        <Route path="admin/" element={<AdminDashboard />}>
+          <Route path="news" element={<AdminNews />} />
+          <Route path="students" element={<Students />} />
+          <Route path="internshipRequests" element={<InternshipRequests />} />
         </Route>
-        <Route path="teacher/dashboard" element={<TeacherDashboard />} />
-        <Route path="student/dashboard" element={<StudentDashboard />} />
+        <Route path="teacher" element={<TeacherDashboard />}>
+          <Route path="internships" element={<TeacherNews />} />
+          <Route path="news" element={<Internships />} />
+          <Route path="notification" element={<TeacherNotifications />} />
+        </Route>
+        <Route path="student" element={<StudentDashboard />}>
+          <Route path="news" element={<StudentNews />} />
+          <Route path="profile" element={<StudentProfile />} />
+          <Route path="internshipRequest" element={<InternshipRequest />} />
+          <Route path="internship" element={<Internship />} />
+          <Route path="notifications" element={<StudentNotification />} />
+        </Route>
       </Routes>
     </Router>
   );

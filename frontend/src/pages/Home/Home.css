@@ -48,10 +48,10 @@
   font-size: 0.85rem;
 }
 
-button {
+.personbtn {
   color: #fff !important ;
   background-color: #5c199e;
-  padding: 10px;
+  padding: 10px 20px;
   font-weight: bold;
   margin: 30px 10px 10px;
   font-size: 1.2rem;

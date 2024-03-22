@@ -14,13 +14,13 @@ const concepts = [
   },
   {
     id: 2,
-    title: "Enseignant",
+    title: "Teacher",
     engTitle: "teacher",
     image: enseignant,
   },
   {
     id: 3,
-    title: "Etudiant",
+    title: "Student",
     engTitle:"student",
     image: etudiant,
   },
@@ -33,9 +33,9 @@ function Home() {
         return (
           <div key={role.id} className="concept">
             <img src={role.image} alt={role.title} />
-            <h2>{role.title}</h2>
+            <h2 className="font-black">{role.title}</h2>
             <Link to={`${role.engTitle}/login`}>
-              <button className="personbtn">Click ici</button>
+              <button className="personbtn">Click here</button>
             </Link>
           </div>
         );

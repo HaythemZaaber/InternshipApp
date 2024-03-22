@@ -12,7 +12,7 @@ const registerAdmin = async (req, res) => {
   }
   // email validation
   if (!validator.isEmail(email)) {
-  res.status(400).json({ error: "Email is not valid" });
+    res.status(400).json({ error: "Email is not valid" });
   }
   // password validation
   if (!validator.isStrongPassword(password)) {
@@ -62,7 +62,7 @@ const loginAdmin = async (req, res) => {
       token: generateToken(admin.id),
     });
   } else {
-    return res.status(400).json({error:"Invalid credentials"});
+    return res.status(400).json({ error: "Invalid credentials" });
   }
 };
 

@@ -37,7 +37,7 @@ router.route("/login").post(loginAdmin);
 
 router.use(protect);
 
-router.get("/user", getProfile);
+router.get("/profile", getProfile);
 router.get("/", getAdmins);
 router.get("/:id", getAdmin);
 router.post("/", createAdmin);

@@ -4,7 +4,10 @@ const Person = require("./person.model");
 const studentSchema = new mongoose.Schema({
   study: String,
   group: String,
-  phone: Number,
+  phoneNumber: Number,
+  secondPhoneNumber: Number,
+  linkedIn: String,
+  address: String,
 });
 
 const Student = Person.discriminator("Student", studentSchema);

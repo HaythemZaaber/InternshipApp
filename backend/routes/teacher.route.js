@@ -55,7 +55,7 @@ router.put("/:id", updateTeacher);
 
 router.delete("/:id", deleteTeacher);
 
-router.get("/user", getProfile);
+router.get("/profile", getProfile);
 
 router.route("/defenseTeacher").get(getDefenseTeachers);
 router.route("/defenseTeacher/:id").get(getDefenseTeacher);

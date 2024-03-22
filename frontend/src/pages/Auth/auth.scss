@@ -6,6 +6,15 @@
   justify-content: center;
   align-items: center;
 }
+.important{
+  display: flex;
+  flex-direction: row !important;
+  gap:8px;
+  // justify-content: space-between;
+  // align-items: center;
+
+
+}
 
 .container {
   width: 40vw;
@@ -56,9 +65,11 @@
 
   form button {
     text-align: center;
-    margin: 30px 0;
     padding: 0.6em 2em;
     border-radius: 5px;
+    font-weight: bold;
+    margin: 30px 0;
+    font-size: 1.2rem;
     border: none;
     color: #fff !important ;
     background-color: #5c199e;
@@ -70,4 +81,11 @@
 .custom-toastify {
   background-color: #2196f3; /* Change this to your desired background color */
   color: #fff; /* Change this to your desired text color */
+}
+
+input[type="number"] {
+  /* Remove the default arrows */
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
 }

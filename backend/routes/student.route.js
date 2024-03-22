@@ -9,6 +9,9 @@ const {
   getStudent,
   updateStudent,
   deleteStudent,
+  createStudentWithImage,
+  upload,
+  updateStudentPicture,
 } = require("../controllers/students.controller");
 
 const {
@@ -55,10 +58,10 @@ router.route("/login").post(loginStudent);
 
 router.use(protect);
 
-router.get("/user", getProfile);
+router.get("/profile", getProfile);
 
 router.get("/", getStudents);
-router.get("/:id", getStudent);
+// router.get("/:id", getStudent);
 router.put("/", updateStudent); //update student details by id and token
 router.delete("/", deleteStudent); //delete a single student from the database using their ID and Token
 
@@ -95,5 +98,7 @@ router
 
 router.route("/intership/defense").get(getDefenses);
 router.route("/intership/defense/:id").get(getDefense);
+
+router.post("/upload", upload, updateStudentPicture);
 
 module.exports = router;

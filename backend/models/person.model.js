@@ -1,27 +1,32 @@
- const mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
-const personSchema = new mongoose.Schema({
-    CIN: Number,
-    name:{
-        type:String,
-        required: [true, 'Please add a name']
+const personSchema = new mongoose.Schema(
+  {
+    CIN: {
+      type: Number,
+      required: [true, "Please add the cinNumber"],
+      unique: [true, "the CIN exists"],
     },
-    email:{
-        type:String,
-        required: [true, 'Please add an email'],
-        unique: [true, 'The email exists']
+    name: {
+      type: String,
+      required: [true, "Please add the fullname"],
     },
-    password:{
-        type: String,
-        required: [true, 'Please add a password']
+    email: {
+      type: String,
+      //   required: [true, "Please add an email"],
+      //   unique: [true, "The email exists"],
+    },
+    password: {
+      type: String,
+      //   required: [true, "Please add a password"],
     },
     picture: String,
-},
-{
-    timestamps : true //this will create two fields createdAt and updatedAt in the schema
-}
-)
-
+birthday: String,
+  },
+  {
+    timestamps: true, //this will create two fields createdAt and updatedAt in the schema
+  }
+);
 
 const Person = mongoose.model("Person", personSchema);
 
